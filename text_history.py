@@ -117,7 +117,7 @@ class DeleteAction(Action):
         self.to_version = to_version
 
     def __repr__(self):
-        return 'delete(pos = {}, length = {}, version1 = {!r}, version2 = {!r})'.format(self.pos, self.length, self.from_version, self.to_version)
+        return 'delete(pos = {}, length = {}, version1 = {}, version2 = {})'.format(self.pos, self.length, self.from_version, self.to_version)
 
     def apply(self, text):
         if self.pos + self.length > len(text):
